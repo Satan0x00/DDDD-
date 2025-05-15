@@ -1,0 +1,36 @@
+id: alibaba-Nacos-默认口令
+info:
+  name: alibaba-Nacos-默认口令
+  severity: high
+  tags: alibaba,Nacos
+requests:
+  - method: POST
+    path:
+      - /nacos/v1/auth/users/login
+    headers:
+      User-Agent: Nacos-Server
+      Content-Type: application/x-www-form-urlencoded
+    body: |
+      username={{username}}&password={{password}}
+    attack: pitchfork
+    payloads:
+      username:
+        - nacos
+      password:
+        - nacos
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - '"accessToken":'
+          - '"username":'
+        condition: and
+      - type: word
+        part: header
+        words:
+          - 'application/json'
+      - type: status
+        status:
+          - 200 

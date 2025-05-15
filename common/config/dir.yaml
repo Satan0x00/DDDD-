@@ -1,0 +1,12 @@
+Alibaba-Nacos:
+  - "/nacos/"
+Alibaba-Druid:
+  - "/druid/index.html"
+vmware-SpringBoot-Framework:
+  - "/error"
+  - "/api/error/"
+GeoServer:
+  - "/geoserver/web/"
+百度-UEditor:
+  - "/ueditor/ueditor.all.js"
+  - "/js/ueditor/ueditor.all.js"

