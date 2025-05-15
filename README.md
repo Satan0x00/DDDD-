@@ -10,5 +10,5 @@
 
 添加微信进群获取<br />
 
-![https://github.com/Satan0x00/DDDD-/blob/main/img/vx.jpg]()
+![img/vx.jpg]()
 
