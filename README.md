@@ -10,5 +10,5 @@
 
 添加微信进群获取<br />
 
-![img/vx.jpg]()
 
+![vx](https://github.com/user-attachments/assets/5b6a44a1-a397-4f3e-8f73-0553fadf8f18)
