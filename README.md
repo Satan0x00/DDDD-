@@ -1,2 +1,213 @@
 # dddd-
 dddd 二开长期维护版
+# 更新内容
+1.修复mysql爆破失败的问题<br />
+2.允许-fofa -quake -hunter 同时使用，允许输入四种类型数据：公司名|域名|ip|CIDR<br />
+3.新增-gyl 参数配合fofa同时使用可以批量攻击同指纹网站会对fofa资产进行端口扫描，适用于对同指纹的资产批量攻击获取源码<br />
+4.添加大量指纹<br />
+5.修改nuclei对模板的限制（原dddd项目下好多人说自己添加的poc不能使用就是这个问题）<br />
+6.修正报错的部分模板<br />
+7.修改subfinder部分逻辑<br />
+8.定期把内部poc更新到公共版本<br />
+扫码进群<br />
+
+![5 31vx群](https://github.com/user-attachments/assets/d21cdfb5-ce20-462c-b1b3-e5ed116b252d)
+<br />
+------------------------------------------------------------------------------------------------------
+由于精力有限poc维护也需要对poc进行验证甚至很多都要自行编写，以及维护高危资产的poc需要按照产品名梳理所以下面两个部分不免费开放，谢谢理解！<br />
+8.新增-hw 参数支持攻防快速打点,参考goby的fofa能力集成可以直接拉取fofa quake hunter资产直接快速漏洞检测，这个模式攻防演练中特别实用，可能在未触发安全设备的情况下直接找到漏洞点，并且打点速度快人N倍<br />
+9.后续持续维护内部poc，按照产品分类收集书写nuclei poc，确保漏洞够全，内部成员可以提poc需求，对有需求的poc优先实现<br />
+星球后续还会提供其他内部工具
+内部版请添加星球<br />
+![github星球二维码](https://github.com/user-attachments/assets/2b46f4d1-b7fc-408b-a913-37b8ce4b2421)
+
+<br />
+2025.5.20 更新poc如下：
+    - Vite-任意文件读取漏洞-CVE-2025-30208
+    - Vite-任意文件读取漏洞-CVE-2025-31125
+    - Vite-任意文件读取漏洞-CVE-2025-31486
+    - Vite-任意文件读取漏洞-CVE-2025-32395
+    - 用友时空KSOA-PrintZPZP-SQL延时注入
+    - 用友时空KSOA-fillKP-SQL延时注入
+    - 用友时空KSOA-PreviewKPQT-SQL延时注入
+    - 用友时空KSOA-PrintZPFB-SQL延时注入
+    - 用友时空KSOA-PrintZP-SQL延时注入
+    - 用友时空KSOA-PrintZPYG-SQL注入
+    - jeesite-默认密码
+    - ZZCMS-index-php-SQL延时注入漏洞-CVE-2025-0565
+    - 蓝凌OA-WebService-hrStaffWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-kmImeetingBookWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-kmImeetingResWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-loginWebserviceService-任意文件读取漏洞
+    - 蓝凌OA-WebService-sysFormMainDataInsystemWebservice-任意文件读取漏洞
+    - 蓝凌OA-WebService-sysNotifyTodoWebServiceEkpj-任意文件读取漏洞
+    - 蓝凌OA-WebService-sysNotifyTodoWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-sysSynchroGetOrgWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-sysTagWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-thirdImSyncForKKWebService-任意文件读取漏洞
+    - 蓝凌OA-WebService-wechatWebserviceService-任意文件读取漏洞
+    - 蓝凌OA-文件Copy导致远程代码执行漏洞-XVE-2023-18344
+    - 宏景eHR-uploadLogo-do-任意文件上传
+    - 宏景eHR-common_org_loadtree-SQL延时注入漏洞
+    - 宏景eHR-customreport_tree-SQL延时注入漏洞
+    - 宏景eHR-DownLoadCourseware-任意文件读取漏洞
+    - 宏景eHR-LoadOtherTreeServlet-SQL延时注入漏洞
+    - 宏景eHR-openFile任意文件读取漏洞
+    - 宏景eHR-OutputCode任意文件读取漏洞
+    - 宏景eHR-pos_dept_post-SQL延时注入漏洞
+    - 宏景eHR-sduty_getSdutyTree-SQL注入漏洞
+    - 宏景eHR-showmediainfo-SQL延时注入漏洞
+    - 赛蓝企业管理系统-System_FocusList_SubmitUploadify-任意文件上传漏洞
+    - 赛蓝企业管理系统-AuthToken_Index-身份认证绕过漏洞
+    - 赛蓝企业管理系统-DownloadBuilder-任意文件读取漏洞
+    - 赛蓝企业管理系统-EHR_Holidays_SubmitUploadify-任意文件上传漏洞
+    - 赛蓝企业管理系统-GetExcellTemperature-SQL注入漏洞
+    - 赛蓝企业管理系统-GetFieldJson-SQL注入漏洞
+    - 赛蓝企业管理系统-GetImportDetailJson-SQL延时注入漏洞 
+    - 用友U8-Cloud-MultiRepChooseAction-SQL延时注入漏洞
+    - 用友U8-Cloud-ReleaseRepMngAction-SQL延时注入漏洞-CNVD-2024-33023
+    - 用友U8-Cloud-RepAddToTaskAction-SQL延时注入漏洞
+    - 用友U8-Cloud-smartweb2_showRPCLoadingTip_d-XXE漏洞
+    - 用友U8-Cloud-uapbd-refdef-query-SQL注入漏洞
+    - 用友U8-Cloud-XChangeServlet-XXE漏洞
+    - 用友YonBIP-R5旗舰版-yonbiplogin-任意文件读取
+    - 泛微E-Cology9-QRcodeBuildAction-身份认证绕过导致SQL延时注入漏洞
+    - 泛微E-Cology9-WorkPlanService-前台SQL延时注入漏洞-XVE-2024-18112
+    - 泛微E-Cology10-appThirdLogin-身份认证绕过漏洞
+    - 泛微E-Cology-BlogService-SQL延时注入漏洞
+    - 泛微E-Cology-getFileViewUrl-SSRF漏洞
+    - 泛微E-Cology-WorkflowServiceXml-SQL注入漏洞
+    - 吉大正元身份认证网关-downTools-任意文件读取
+    - 易宝OA-ExecuteQueryForDataSetBinary-SQL延时注入漏洞
+    - 易宝OA-ExecuteQueryNoneResult-SQL延时注入漏洞
+    - 易宝OA-ExecuteSqlForDataSet-SQL延时注入漏洞
+    - 易宝OA-GetProductInv-SQL注入漏洞
+    - 易宝OA-getStockInRequestPrintDetail-SQL延时注入漏洞
+    - 易宝OA-GetUDEFStreamID-SQL延时注入
+    - FastAdmin后台开发框架-lang任意文件读取漏洞
+    - 九思OA-dl-jsp-任意文件读取
+    - 九思OA-WebServiceProxy-XXE漏洞
+    - 九思OA-workflowSync-getUserStatusByRole-dwr-SQL延时注入
+    - 章管家-listUploadIntelligent-SQL注入漏洞
+    - 章管家-saveUser-任意用户创建漏洞
+    - 联达动力OA-UpLoadFile-aspx-任意文件上传漏洞
+    - 联达动力OA-uploadImg-aspx-任意文件上传漏洞
+    - 联达动力OA-uploadLogo-aspx-任意文件上传漏洞
+    - BladeX企业级开发平台-code_list-SQL注入漏洞
+    - BladeX企业级开发平台-notice_list-SQL注入漏洞
+    - BladeX企业级开发平台-usual_list-SQL注入漏洞
+    - 亿赛通电子文档安全管理系统-NoticeAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-CDGAuthoriseTempletService1-SQL注入漏洞-XVE-2024-19611
+    - 亿赛通电子文档安全管理系统-DeviceAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-DocInfoAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-FileFormatAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-findByLockName-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-getAllUsers-信息泄露漏洞
+    - 亿赛通电子文档安全管理系统-LogicGroupAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-MultiServerAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-NavigationAjax-SQL延时注入漏洞
+    - 亿赛通电子文档安全管理系统-NetSecPolicyAjax-SQL延时注入漏洞
+    - jeecg-queryFieldBySql-rce-CVE-2023-4450
+    - jeecg-boot-getDictItemsByTable-sql
+    - JeecgBootgetTotalData-SQL-CVE-2024-48307
+    - jeecg-boot-jmreport-upload
+    - JeecgBoot-loadTableData-RCE
+    - JeecgBoot-onlDragDatasetHead_getTotalData-SQL注入漏洞-CVE-2024-48307
+    - JeecgBoot-passwordChange-任意用户密码重置漏洞
+    - jeecg-boot-queryTableData-sqli
+    - jeecg-boot-sqli
+    - JeecgBoot-testConnection-RCE
+    - JeecgBoot-权限绕过致AviatorScript表达式注入漏洞
+    - JeecgcommonController任意文件上传
+    - 用友U8-Cloud-AddTaskDataRightAction-SQL延时注入漏洞
+    - 用友U8-Cloud-approveservlet-SQL注入漏洞
+    - 用友U8-Cloud-BusinessRefAction-SQL延时注入漏洞
+    - 用友U8-Cloud-ExportUfoFormatAction-SQL延时注入漏洞-XVE-2024-4626
+    - 用友U8-Cloud-linkntbSQL注入漏洞
+    - 用友U8-Cloud-MeasQueryConditionFrameAction-SQL延时注入漏洞
+    - 用友U8-Cloud-MeasureQResultAction-SQL延时注入漏洞
+    - 用友U8-Cloud-MeasureQueryFrameAction-SQL延时注入漏洞
+    - 泛微-云桥e-Bridge-addTasteJsonp-SQL延时注入漏洞
+    - 泛微-云桥e-Bridge-checkMobile-SQL延时注入漏洞-XVE-2024-34435
+    - 用友U8-CRM-getufvouchdata-php-SQL注入漏洞
+    - 用友U8-CRM-import文件上传
+    - 用友U8-CRM-leadconversion-php-SQL延时注入
+    - 用友U8-CRM-relobjreportlist-php-SQL延时注入漏洞
+    - 用友U8-CRM-setremindtoold-php-SQL延时注入漏洞
+    - 用友U8CRM-uploadfile文件上传
+    - 用友U8-CRM-ajaxgetborrowdata-php-SQL延时注入-1
+    - 用友U8-CRM-ajaxgetborrowdata-php-SQL延时注入-2
+    - 用友U8-CRM-ajaxgetborrowdata-php-SQL延时注入-3
+    - 用友U8-CRM-ajaxgetborrowdata-php-SQL注入漏洞
+    - 用友U8-CRM-biztype-php-SQL延时注入
+    - 用友U8-CRM-chkService-php-SQL延时注入漏洞
+    - 用友U8-CRM-downloadfile-任意文件读取漏洞
+    - 用友U8-CRM-eventsetlist-php-SQL延时注入
+    - 用友U8-CRM-exportdictionary-php-SQL延时注入漏洞
+    - 用友U8-CRM-fillbacksetting-php-SQL延时注入漏洞
+    - 用友U8-CRM-fillbacksettingedit-php-SQL注入漏洞
+    - 用友U8-CRM-getufvouchdata-php-SQL延时注入
+    - 金和OA-C6-ApproveRemindSetExec-aspx-XXE漏洞-CNVD-2024-40568
+    - 金和OA-C6-DBModules-aspx-SQL延时注入漏洞
+    - 金和OA-C6-FileDownLoad任意文件读取漏洞
+    - 金和OA-C6-IncentivePlanFulfillAppprove-aspx-SQL延时注入漏洞
+    - 金和OA-C6-jQueryUploadify-ashx-SQL延时注入漏洞
+    - 金和OA-C6-SignUpload-ashx-SQL延时注入漏洞
+    - 金和OA-C6-UploadFileEditor-aspx-SQL延时注入漏洞
+    - 泛微E-Mobile-client-do-命令执行漏洞
+    - 泛微E-Mobile-client_cdnfile-任意文件读取漏洞
+    - 泛微E-Mobile-installOperate-SSRF漏洞
+    - 蓝凌EIS智慧协同平台-fi_message_receiver-aspx-SQL注入漏洞-CVE-2025-22214
+    - 用友GRP-U8-bx_dj_check-jsp-SQL延时注入漏洞-XVE-2024-10537
+    - 用友GRP-U8-dialog_moreUser_check-jsp-SQL延时注入漏洞-XVE-2024-10610
+    - 用友GRP-U8-userInfoWeb-SQL延时注入漏洞-XVE-2024-10539
+    - JeeWMS-cgAutoListController-do-SQL注入漏洞
+    - JeeWMS-cgFormBuildController-do-SQL注入漏洞-CVE-2025-0391
+    - JeeWMS-cgformTemplateController-do-任意文件读取漏洞-CVE-2024-27765
+    - JeeWMS-cgReportController-do-SQL注入漏洞-CVE-2024-57760
+    - JeeWMS-commonController-do-任意文件上传漏洞-CVE-2024-57761
+    - JeeWMS-graphReportController-do-SQL注入漏洞-CVE-2025-0392
+    - JeeWMS-iconController-do-任意文件上传漏洞
+    - 用友NC-checkekey-SQL注入漏洞-XVE-2024-37013
+    - 用友NC-Cloud-blobRefClassSearch-FastJson反序列化RCE
+    - 用友-NC-Cloud-importhttpscer-任意文件上传漏洞
+    - 用友NC-Cloud-queryPsnInfo-SQL注入漏洞
+    - 用友NC-Cloud-queryStaffByName-SQL注入漏洞
+    - 用友NC-down_bill-SQL延时注入-XVE-2024-9469
+    - 用友NC-downCourseWare-任意文件读取漏洞
+    - 用友NC-download-任意文件读取-XVE-2023-31829
+    - 用友NC-ECFileManageServlet-反序列化RCE
+    - 用友-NC-FileManager-任意文件上传漏洞
+    - 用友NC-files-反序列化RCE
+    - 用友NC-FormulaViewAction-SQL延时注入漏洞
+    - 用友NC-importPml-SQL延时注入漏洞-XVE-2023-29120
+    - 用友NC-isAgentLimit-SQL延时注入漏洞
+    - 用友NC-jiuqisingleservlet-反序列化RCE
+    - 用友NC-link_content-SQL延时注入漏洞
+    - 用友NC-ncmsgservlet-反序列化RCE
+    - 用友NC-pagesServletSQL延时注入漏洞-XVE-2024-13067
+    - 用友NC-PaWfm_open-SQL延时注入漏洞-XVE-2023-29119
+    - 用友NC-PaWfm2_open-SQL延时注入漏洞-XVE-2023-29119
+    - 用友NC-process-SQL注入漏洞
+    - 用友NC-registerServletJNDI-远程代码执行漏洞-XVE-2024-10248
+    - 用友NC-runStateServlet-SQL延时注入漏洞
+    - 用友NC-saveImageServlet-任意文件上传漏洞-XVE-2024-7471
+    - 用友-NC-saveXmlToFIleServlet-任意文件上传漏洞-XVE-2024-6507
+    - 用友NC-uploadFile任意文件上传
+    - 用友NC-yerfile_down-SQL延时注入漏洞-XVE-2024-34596
+    - 用友NC及NC-Cloud-show_download_content-SQL延时注入漏洞
+    - Apache-Solr-身份认证绕过导致任意文件读取漏洞-CVE-2024-45216
+    - Apache-Solr-身份认证绕过漏洞-CVE-2024-45216
+    - CVE-2021-29505
+    - Geoserver-property-rce
+    - Geoserver-ssrf
+    - Geoserver-XPath表达式注入致远程代码执行漏洞-CVE-2024-36401
+    - GeoServer-geoserverwms-RCE
+    - 海康威视综合安防管理平台-detection-前台RCE
+    - 海康威视综合安防管理平台-orgManagev1orgsdownload-任意文件读取漏洞
+    - 海康威视综合安防管理平台多处-FastJson反序列化RCE漏洞
+    - 海康威视综合安防管理平台-apiexternalreport任意文件上传
+    - 海康威视综合安防管理平台-applyCTfastjsonRCE
+    - 海康威视综合安防管理平台-artemis-port_alartemis_env信息泄露
+    - 海康威视综合安防管理平台-centerapifiles任意文件上传
+    - 海康威视综合安防管理平台-Centerlmapifiles任意文件读取
